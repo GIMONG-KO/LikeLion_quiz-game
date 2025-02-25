@@ -35,5 +35,6 @@ public class StagePopupPanelController : MonoBehaviour
                 stageCellButton.SetStageCell(i, StageCellButton.StageCellType.Lock);
             }
         }
+        
     }
 }
