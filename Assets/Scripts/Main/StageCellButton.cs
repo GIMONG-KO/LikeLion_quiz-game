@@ -10,10 +10,18 @@ public class StageCellButton : MonoBehaviour
     [SerializeField] private GameObject clearImageObject;
     [SerializeField] private TMP_Text[] stageIndexText;
 
+    private RectTransform _rectTransform;
+    public RectTransform RectTransform => _rectTransform;
+
     public enum StageCellType { Normal, Lock, Clear }
     private StageCellType _stageCellType;
     private int _stageIndex;
-    
+
+    private void Awake()
+    {
+        _rectTransform = GetComponent<RectTransform>();
+    }
+
     public void SetStageCell(int stageIndex, StageCellType stageCellType)
     {
         _stageIndex = stageIndex;

@@ -198,7 +198,70 @@ MonoBehaviour:
   m_VerticalScrollbarSpacing: -3
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8964960044725432914}
+        m_TargetAssemblyTypeName: StagePopupPanelController, Assembly-CSharp
+        m_MethodName: OnValueChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &2170516404973383903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7158136537965216362}
+  - component: {fileID: 5095471200809113942}
+  m_Layer: 5
+  m_Name: Object Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7158136537965216362
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2170516404973383903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1928141782962086076}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5095471200809113942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2170516404973383903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ed598dbe8aefc43a5db5b3f86eb8c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1390166655373410884, guid: c95a1e7c6eb77154bb5578656ae96944, type: 3}
+  poolSize: 0
+  parent: {fileID: 716098567828037842}
 --- !u!1 &2549996741481948378
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,8 +433,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 716098567828037842}
-  - component: {fileID: 6425250627364520392}
-  - component: {fileID: 1449321394425512355}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -398,44 +459,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &6425250627364520392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7516499591573297221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 40
-    m_Right: 40
-    m_Top: 40
-    m_Bottom: 40
-  m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 300, y: 300}
-  m_Spacing: {x: 40, y: 40}
-  m_Constraint: 1
-  m_ConstraintCount: 3
---- !u!114 &1449321394425512355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7516499591573297221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 2
 --- !u!1 &7521906978012253929
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +866,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4500743453487707290, guid: 19fee29f83085004884b5557d272755e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7158136537965216362}
     - targetCorrespondingSourceObject: {fileID: 7964625586905491789, guid: 19fee29f83085004884b5557d272755e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8625254493271638761}
@@ -851,6 +877,11 @@ PrefabInstance:
       insertIndex: 3
       addedObject: {fileID: 8964960044725432914}
   m_SourcePrefab: {fileID: 100100000, guid: 19fee29f83085004884b5557d272755e, type: 3}
+--- !u!224 &1928141782962086076 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4500743453487707290, guid: 19fee29f83085004884b5557d272755e, type: 3}
+  m_PrefabInstance: {fileID: 2645857012831196198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5350258947871391083 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7964625586905491789, guid: 19fee29f83085004884b5557d272755e, type: 3}
@@ -875,3 +906,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageCellPrefab: {fileID: 1390166655373410884, guid: c95a1e7c6eb77154bb5578656ae96944, type: 3}
   contentTransform: {fileID: 716098567828037842}
+  scrollView: {fileID: 1506635861743281751}
+  cellColumnCount: 3
+  cellWidth: 300
+  cellHeight: 300
+  spacing: {x: 40, y: 40}
